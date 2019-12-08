@@ -1,7 +1,43 @@
--- SELECT * FROM departments LIMIT 10;
--- SELECT * FROM employees LIMIT 10;
--- SELECT * FROM dept_emp LIMIT 10;
--- SELECT * FROM dept_manager LIMIT 10;
--- SELECT * FROM salary LIMIT 10;
--- SELECT * FROM titles LIMIT 10;
+-- 1.
+-- SELECT 
+-- 	e.emp_no "Employee Number", 
+-- 	e.last_name "Last Name", 
+-- 	e.first_name "First Name", 
+-- 	e.gender "Gender", 
+-- 	s.salary "Salary" 
+-- FROM 
+-- 	employees e, 
+-- 	salaries s
+-- WHERE e.emp_no = s.emp_no;
 
+-- 2.
+-- SELECT 
+-- 	e.emp_no "Employee Number", 
+-- 	e.last_name "Last Name", 
+-- 	e.first_name "First Name", 
+-- 	e.hire_date "Date Hired"
+-- FROM 
+-- 	employees e
+-- WHERE EXTRACT(YEAR FROM e.hire_date) = 1986;
+
+-- 3.
+-- SELECT 
+-- 	dm.dept_no "Department Number", 
+-- 	d.dept_name "Department Name", 
+-- 	dm.emp_no "Manager Employee Number", 
+-- 	e.last_name "Last Name", 
+-- 	e.first_name "First Name" ,
+-- 	de.from_date "Start Date",
+-- 	de.to_date "End Date"
+-- FROM 
+-- 	dept_manager dm,
+-- 	departments d,
+-- 	employees e,
+-- 	dept_emp de
+-- WHERE
+-- 	dm.dept_no = d.dept_no
+-- 	AND dm.emp_no = e.emp_no
+-- 	AND dm.emp_no = de.emp_no
+-- 	AND dm.dept_no = de.dept_no
+-- ORDER BY
+-- 	"Department Name", "Start Date"

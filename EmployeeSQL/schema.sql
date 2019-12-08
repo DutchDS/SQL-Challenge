@@ -59,11 +59,11 @@ CREATE TABLE salaries(
 -- DROP TABLE IF EXISTS dept_manager;
 CREATE TABLE dept_manager(
 	id SERIAL,
-	dept_man_no	VARCHAR(4),
+	dept_no	VARCHAR(4),
 	emp_no	INT,
 	from_date	DATE	NOT NULL,
 	to_date	DATE	NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (dept_man_no) REFERENCES departments(dept_no),
+	FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
 	FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 	);
