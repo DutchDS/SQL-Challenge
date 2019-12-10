@@ -1,1 +1,0 @@
-Create a bar chart of average salary by title.
