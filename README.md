@@ -8,3 +8,7 @@ Staff is making far more money on average than managers are! None of this makes 
 
 ![Avg_Sal.png](EmployeeSQL/Avg_Sal.png)
 
+The table scheme is as follows:
+
+![ERD.png](EmployeeSQL/ERD.png)
+
