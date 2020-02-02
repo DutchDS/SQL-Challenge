@@ -12,3 +12,5 @@ The table scheme is as follows:
 
 ![ERD.png](EmployeeSQL/ERD.png)
 
+
+
